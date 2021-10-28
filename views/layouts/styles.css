@@ -1,0 +1,21 @@
+
+.welcome{
+    text-align: center;
+    margin-top: 150px ;
+    font-family: sans-serif;
+    font-size: 60px;
+}
+.blogname{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.welcome_message{
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    color: grey;
+}
+.ecs_website{
+    font-size: 20px;
+    border-radius: 10px;
+}
+   

@@ -1,0 +1,25 @@
+{
+  "name": "techblog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "nodemon app.js",
+    "cy": "cypress open ",
+    "ci:dev": "start-server-and-test dev cy"
+  },
+  "author": "Adam Deen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4"
+  },
+  "devDependencies": {
+    "cypress": "^8.7.0",
+    "eslint": "^8.1.0",
+    "jest": "^27.3.1",
+    "start-server-and-test": "^1.14.0",
+    "supertest": "^6.1.6"
+  }
+}
