@@ -32,7 +32,10 @@ pipeline{
                 }
                 stage('Run Cypress'){
                     steps{
-                        sh 'npm run cy'
+                        sh '''
+                            (npm bin)/cypress run
+                            
+                        '''
                     }
                 }
             }
