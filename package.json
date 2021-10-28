@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "dev": "node app.js",
-    "cy": "cypress run ",
+    "cy": "cypress run",
     "ci:dev": "start-server-and-test dev cy"
   },
   "author": "Adam Deen",
