@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "jest",
-    "dev": "nodemon app.js",
+    "dev": "node app.js",
     "cy": "cypress run ",
     "ci:dev": "start-server-and-test dev cy"
   },
