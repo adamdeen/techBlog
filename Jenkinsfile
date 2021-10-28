@@ -21,6 +21,7 @@ pipeline{
                         timeout(1){
                             script{
                                 try{
+                                    echo "running server"
                                     sh 'npm run dev'
                                 }
                                 catch(Throwable e){
@@ -33,7 +34,7 @@ pipeline{
                 stage('Run Cypress'){
                     steps{
                         sh '''
-                            (npm bin)/cypress run
+                            $(npm bin)/cypress run
                             
                         '''
                     }
