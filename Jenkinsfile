@@ -18,7 +18,16 @@ pipeline{
             parallel{
                 stage('Start server'){
                     steps{
-                        sh 'npm run dev'
+                        timeout(1){
+                            script{
+                                try{
+                                    sh 'npm run dev'
+                                }
+                                catch(Throwable e){
+                                    currentBuild.result = "SUCCESS"
+                                }
+                            }
+                        }
                     }
                 }
                 stage('Run Cypress'){
