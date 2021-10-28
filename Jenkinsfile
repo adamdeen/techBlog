@@ -8,16 +8,26 @@ pipeline{
 
     stages{
 
-        stage('Build'){
+        stage('install dependencies'){
             steps{
-                sh 'npm run dev'
+                sh 'npm install'
             }
         }
 
-        stage('Test'){
-
+        stage('UI Tests'){
+            parallel{
+                stage('Start server'){
+                    steps{
+                        sh 'npm run dev'
+                    }
+                }
+                stage('Run Cypress'){
+                    steps{
+                        sh 'npm run cy'
+                    }
+                }
+            }
         }
-
     }
 
 }
